@@ -1,0 +1,74 @@
+.env
+*old/*
+*_old*
+*_dev*
+* dev*
+*_orig*
+dev/*
+*test*
+*test/*
+*tst*
+*temp*
+temp/*
+*tmp*
+tmp/*
+*.sqlite
+*.sqlite-journal
+*.db
+*copy*
+*.csv
+*.xls*
+*.dll
+*.exe
+*.log
+*.bak
+
+### Python  ###
+__pycache__/
+
+# Environments
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+### VisualStudioCode ###
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/*.code-snippets
+
+# Local History for Visual Studio Code
+.history/
+
+# Built Visual Studio Code Extensions
+*.vsix
+
+### VisualStudioCode Patch ###
+# Ignore all local history of files
+.history
+.ionide
+
+### macOS ###
+.DS_Store
+
+### Windows ###
+# Windows thumbnail cache files
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+
+# Windows Installer files
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+
+# Windows shortcuts
+*.lnk
