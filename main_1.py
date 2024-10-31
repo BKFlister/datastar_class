@@ -8,14 +8,14 @@ from fastapi.responses import HTMLResponse, StreamingResponse
 
 #region Datastar
 class MergeType(str, Enum):
-    MORPH = "morph_element"
-    INNER = "inner_element"
-    OUTER = "outer_element"
-    PREPEND = "prepend_element"
-    APPEND = "append_element"
-    BEFORE = "before_element"
-    AFTER = "after_element"
-    DELETE = "delete_element"
+    MORPH = "morph"
+    INNER = "inner"
+    OUTER = "outer"
+    PREPEND = "prepend"
+    APPEND = "append"
+    BEFORE = "before"
+    AFTER = "after"
+    DELETE = "delete"
     UPSERT_ATTRIBUTES = "upsert_attributes"
 
 class DatastarEvent:
@@ -61,7 +61,7 @@ class DatastarSignal:
 
     def format_sse(self):
         """Format the event data for Server-Sent Events (SSE)."""
-        return f"event: {self.event}\ndata: {json.dumps(self.store)}\n\n"
+        return f"event: {self.event}\ndata: onlyIfMissing false\ndata: store {json.dumps(self.store)}\n\n"
 
     async def event_generator(self):
         """Generate the SSE event."""
@@ -100,7 +100,7 @@ html = f"""
     <title>Fastapi SSE with Datastar</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script type="module" defer src="https://cdn.jsdelivr.net/npm/@sudodevnull/datastar@0.18.13/dist/datastar.min.js"></script>
+    <script type="module" defer src="https://cdn.jsdelivr.net/npm/@sudodevnull/datastar"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
 </head>
 <body>

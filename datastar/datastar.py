@@ -27,14 +27,14 @@ class EventType(str, Enum):
     SIGNAL = "datastar-signal"
 
 class MergeType(str, Enum):
-    MORPH = "morph_element"
-    INNER = "inner_element"
-    OUTER = "outer_element"
-    PREPEND = "prepend_element"
-    APPEND = "append_element"
-    BEFORE = "before_element"
-    AFTER = "after_element"
-    DELETE = "delete_element"
+    MORPH = "morph"
+    INNER = "inner"
+    OUTER = "outer"
+    PREPEND = "prepend"
+    APPEND = "append"
+    BEFORE = "before"
+    AFTER = "after"
+    DELETE = "delete"
     UPSERT_ATTRIBUTES = "upsert_attributes"
 
 class FragmentConfig(TypedDict, total=False):
@@ -89,7 +89,7 @@ class DatastarEvent:
         Returns:
             A DatastarEvent instance (or subclass) configured for a signal event.
         """
-        return cls(content=data, event_type=EventType.SIGNAL)
+        return cls(content=f"store {data}", event_type=EventType.SIGNAL)
 
     def _format_fragment_sse(self, fragment: Union[str, FragmentConfig]) -> str:
         """

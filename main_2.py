@@ -25,7 +25,7 @@ html = f"""
     <title>Fastapi SSE with Datastar</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script type="module" defer src="https://cdn.jsdelivr.net/npm/@sudodevnull/datastar@0.18.13/dist/datastar.min.js"></script>
+    <script type="module" defer src="https://cdn.jsdelivr.net/npm/@sudodevnull/datastar"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
 </head>
 <body>
