@@ -25,7 +25,7 @@ html = f"""
     <title>Fastapi SSE with Datastar</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script type="module" defer src="https://cdn.jsdelivr.net/npm/@sudodevnull/datastar"></script>
+    <script type="module" defer src="https://cdn.jsdelivr.net/npm/@sudodevnull/datastar@0.18.13/dist/datastar.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
 </head>
 <body>
@@ -166,3 +166,7 @@ async def feed_alt():
         interval=0.1
     )
     return datastream(stream)
+
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run( app, host="127.0.0.1", port=8000)

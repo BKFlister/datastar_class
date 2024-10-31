@@ -6,6 +6,8 @@ This project demonstrates two approaches to implementing the `DataStar` function
 http://data-star.dev
 https://github.com/delaneyj/datastar
 
+> Needs updating for changes in DataStar v.0.19.x !
+
 ## Files
 - **main_1.py**: Contains the `DataStar` functionality directly within the script, uses a simpler, more direct approach with separate classes for fragments and signals,
 - **main_2.py**: Utilizes the `datastar.py` module to implement the `DataStar` functionality.
